@@ -1,0 +1,103 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.dashboardInfo {
+  width: 100%;
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+.dashboard {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+  .asignedUserStats {
+    display: flex;
+    flex-direction: column;
+  }
+  .studentBirthday-bar {
+    width: 50% !important;
+    height: 100% !important;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.boxHeader {
+  font-weight: 600;
+  font-size: 28px;
+}
+.returnBack {
+  color: cornflowerblue !important;
+  font-weight: 500;
+}
+
+.product-slider {
+  height: 500px;
+  background-size: contain;
+  width: 100% !important;
+}
+
+.productDetailInfo {
+
+  margin-left: 100px;
+
+  h1 {
+    font-size: 40px;
+  }
+  span {
+    font-size: 30px;
+
+    span {
+      color: red;
+    }
+  }
+
+  &-texts {
+    padding-top: 50px;
+    border-top: 1px solid black;
+
+    p{
+      font-size: 22px;
+      padding-bottom: 5px;
+    }
+  }
+}

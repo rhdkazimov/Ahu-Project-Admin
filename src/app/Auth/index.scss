@@ -1,0 +1,26 @@
+.loginBox {
+  display: flex;
+  justify-content: center;
+  .inputArea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    .error {
+      color: red;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    input,
+    button {
+      width: 300px;
+      margin-bottom: 5px;
+    }
+  }
+  .imgArea {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+}
