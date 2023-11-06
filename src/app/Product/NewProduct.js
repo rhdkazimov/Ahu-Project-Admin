@@ -6,7 +6,9 @@ import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 import { ROUTES } from "../../Routes/consts";
 import {
+  Box,
   Button,
+  Flex,
   FormControl,
   FormLabel,
   Input,
@@ -74,58 +76,103 @@ const NewProduct = () => {
       </Text>
       <FormLabel>Mehsul Adi</FormLabel>
       <Input onChange={(e) => handleOnChangeInput(e)} name="name" />
-      <FormLabel>Brend</FormLabel>
-      <Select name="brandId" onChange={(e) => handleOnChangeInput(e)}>
-        {brandData?.map(({ name, id }) => (
-          <option key={id} value={id}>
-            {name}
-          </option>
-        ))}
-      </Select>
-      <FormLabel>Kateqoriya</FormLabel>
-      <Select name="categoryId" onChange={(e) => handleOnChangeInput(e)}>
-        {categoryData?.map(({ name, id }) => (
-          <option key={id} value={id}>
-            {name}
-          </option>
-        ))}
-      </Select>
-      <FormLabel>Satış Qiymeti</FormLabel>
-      <Input
-        onChange={(e) => handleOnChangeInput(e)}
-        type="number"
-        name="salePrice"
-      />
-      <FormLabel>Alış Qiymeti</FormLabel>
-      <Input
-        onChange={(e) => handleOnChangeInput(e)}
-        type="number"
-        name="costPrice"
-      />
-      <FormLabel>Endirim Faizi </FormLabel>
-      <Input
-        onChange={(e) => handleOnChangeInput(e)}
-        type="number"
-        name="discountPercent"
-      />
-      <FormLabel>Stok sayı</FormLabel>
-      <Input
-        onChange={(e) => handleOnChangeInput(e)}
-        type="number"
-        name="stockCount"
-      />
+      <Box display={"flex"} justifyContent={"space-between"}>
+        <Box width={"45%"}>
+          <FormLabel>Brend</FormLabel>
+          <Select name="brandId" onChange={(e) => handleOnChangeInput(e)}>
+            {brandData?.map(({ name, id }) => (
+              <option key={id} value={id}>
+                {name}
+              </option>
+            ))}
+          </Select>
+        </Box>
+        <Box width={"45%"}>
+          <FormLabel>Kateqoriya</FormLabel>
+          <Select name="categoryId" onChange={(e) => handleOnChangeInput(e)}>
+            {categoryData?.map(({ name, id }) => (
+              <option key={id} value={id}>
+                {name}
+              </option>
+            ))}
+          </Select>
+        </Box>
+      </Box>
+      <Box display={"flex"} justifyContent={"space-between"}>
+        <Box width={"24%"}>
+          <FormLabel>Satış Qiymeti</FormLabel>
+          <Input
+            onChange={(e) => handleOnChangeInput(e)}
+            type="number"
+            name="salePrice"
+          />
+        </Box>
+        <Box width={"24%"}>
+          <FormLabel>Alış Qiymeti</FormLabel>
+          <Input
+            onChange={(e) => handleOnChangeInput(e)}
+            type="number"
+            name="costPrice"
+          />
+        </Box>
+        <Box width={"24%"}>
+          <FormLabel>Endirim Faizi </FormLabel>
+          <Input
+            onChange={(e) => handleOnChangeInput(e)}
+            type="number"
+            name="discountPercent"
+          />
+        </Box>
+        <Box width={"24%"}>
+          <FormLabel>Stok sayı</FormLabel>
+          <Input
+            onChange={(e) => handleOnChangeInput(e)}
+            type="number"
+            name="stockCount"
+          />
+        </Box>
+      </Box>
       <FormLabel>Açığlaması</FormLabel>
       <Input onChange={(e) => handleOnChangeInput(e)} name="description" />
-      <FormLabel>Ölçüsü</FormLabel>
-      <Input onChange={(e) => handleOnChangeInput(e)} name="size" />
-      <FormLabel>Rəngi</FormLabel>
-      <Input onChange={(e) => handleOnChangeInput(e)} name="color" />
-      <FormLabel>İlkin Qiymətləndirilməsi </FormLabel>
-      <Input
-        onChange={(e) => handleOnChangeInput(e)}
-        type="number"
-        name="rate"
-      />
+      <Box display={"flex"} justifyContent={"space-between"}>
+        <Box width={"33%"}>
+          <FormLabel>Ölçüsü</FormLabel>
+          <Select name="size" onChange={(e) => handleOnChangeInput(e)}>
+            <option value="Oversize">Oversize</option>
+            <option value="XS">XS</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+            <option value="2XL">2XL</option>
+          </Select>
+        </Box>
+        <Box width={"33%"}>
+          <FormLabel>Rəngi</FormLabel>
+          <Select name="color" onChange={(e) => handleOnChangeInput(e)}>
+            <option value="Colorful">Colorful</option>
+            <option value="White">White</option>
+            <option value="Orange">Orange</option>
+            <option value="Yellow">Yellow</option>
+            <option value="Green">Green</option>
+            <option value="Gray">Gray</option>
+            <option value="Black">Black</option>
+            <option value="Purple">Purple</option>
+            <option value="Red">Red</option>
+            <option value="Blue">Blue</option>
+          </Select>
+        </Box>
+        <Box width={"33%"}>
+          <FormLabel>İlkin Qiymətləndirilməsi </FormLabel>
+          <Select name="rate" onChange={(e) => handleOnChangeInput(e)}>
+            <option value="1">1★</option>
+            <option value="2">2★★</option>
+            <option value="3">3★★★</option>
+            <option value="4">4★★★★</option>
+            <option value="5">5★★★★★</option>
+          </Select>
+        </Box>
+      </Box>
       <FormLabel>Başlıq Şəkili</FormLabel>
       <Input
         onChange={(e) => handleOnChangeFile(e)}
